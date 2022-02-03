@@ -2,10 +2,10 @@ import csvhandler.Impl.CSVHandlerImpl;
 
 public class Main {
     public static void main(String[] args) {
-        CSVHandlerImpl reader = new CSVHandlerImpl();
+        CSVHandlerImpl csvHandler = new CSVHandlerImpl();
 
-        reader.read();
-        reader.serializeArray();
-        reader.saveToCsv();
+        csvHandler.read();
+        csvHandler.serializeArray();
+        csvHandler.saveToCsv();
     }
 }
