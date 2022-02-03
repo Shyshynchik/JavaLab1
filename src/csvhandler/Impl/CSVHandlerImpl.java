@@ -73,17 +73,23 @@ public class CSVHandlerImpl implements CSVHandler, Serializable {
 
     @Override
     public void saveToCsv() {
+        log.createInfoLog("Начало десериализации");
         try {
             ArrayList<DeviceImpl> deviceArrayList = deserializeArray();
+            log.createInfoLog("Начало записи в csv файл");
             StringBuilder sb = new StringBuilder();
             PrintWriter writer = new PrintWriter(PATH_SAVE_CSV);
             for (DeviceImpl device : deviceArrayList) {
                 sb.append(device.toString()).append("\n");
             }
             writer.write(sb.toString());
+            log.createSuccessLog("Запись в csv файл успешно выполнена", "Файл помещен в " + PATH_SAVE_CSV);
             writer.close();
+            log.createInfoLog("Запись в csv файл закончена");
+        }catch (FileNotFoundException e) {
+            log.createErrorLog("Файл не найден", e);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.createErrorLog("Ошибка во время записи файла", e);
         }
         log.logClose();
     }
@@ -94,8 +100,10 @@ public class CSVHandlerImpl implements CSVHandler, Serializable {
             FileInputStream fileInputStream = new FileInputStream(PATH_SAVE_SER);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             deviceArrayList = (ArrayList<DeviceImpl>) objectInputStream.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            log.createSuccessLog("Десериализация успешно выполнена",  "Файл помещен в массив " + deviceArrayList);
+            log.createInfoLog("Десериализация закончена");
+        } catch (IOException | ClassNotFoundException | ClassCastException e) {
+            log.createErrorLog("Ошибка во время десереализации", e);
         }
 
         return deviceArrayList;
