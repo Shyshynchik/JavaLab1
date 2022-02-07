@@ -1,6 +1,6 @@
-package device.impl.tablet.impl;
+package device.impl;
 
-import device.impl.tablet.Tablet;
+import device.Tablet;
 
 public class TabletImpl extends Tablet {
 

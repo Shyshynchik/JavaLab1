@@ -1,4 +1,4 @@
-package device.impl.tablet;
+package device;
 
 import device.impl.DeviceImpl;
 

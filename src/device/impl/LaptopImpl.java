@@ -1,6 +1,6 @@
-package device.impl.laptop.impl;
+package device.impl;
 
-import device.impl.laptop.Laptop;
+import device.Laptop;
 
 public class LaptopImpl extends Laptop{
 

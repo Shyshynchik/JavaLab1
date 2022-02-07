@@ -1,8 +1,8 @@
 package csvhandler.Impl;
 
 import device.impl.DeviceImpl;
-import device.impl.laptop.impl.LaptopImpl;
-import device.impl.tablet.impl.TabletImpl;
+import device.impl.LaptopImpl;
+import device.impl.TabletImpl;
 import csvhandler.CSVHandler;
 import logger.impl.LoggerImpl;
 
