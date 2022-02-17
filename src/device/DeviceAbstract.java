@@ -2,7 +2,7 @@ package device.impl;
 
 import device.Device;
 
-public class DeviceImpl implements Device {
+public abstract class DeviceImpl implements Device {
     protected String brand;
     protected String diagonal;
     protected String ram;
