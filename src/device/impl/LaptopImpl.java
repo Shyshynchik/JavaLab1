@@ -1,8 +1,6 @@
 package device.impl;
 
-import device.Laptop;
-
-public class LaptopImpl extends Laptop{
+public class LaptopImpl extends device.Laptop {
 
     @Override
     public String getCpu() {

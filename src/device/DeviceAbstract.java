@@ -1,8 +1,6 @@
-package device.impl;
+package device;
 
-import device.Device;
-
-public abstract class DeviceImpl implements Device {
+public abstract class DeviceAbstract implements Device {
     protected String brand;
     protected String diagonal;
     protected String ram;

@@ -1,8 +1,6 @@
 package device;
 
-import device.impl.DeviceImpl;
-
-public abstract class Tablet extends DeviceImpl {
+public abstract class Tablet extends DeviceAbstract {
 
     protected String os;
     protected String memory;

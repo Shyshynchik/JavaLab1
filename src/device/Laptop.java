@@ -1,8 +1,6 @@
 package device;
 
-import device.impl.DeviceImpl;
-
-public abstract class Laptop extends DeviceImpl {
+public abstract class Laptop extends DeviceAbstract {
 
     protected String cpu;
     protected String videoCard;

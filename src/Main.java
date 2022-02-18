@@ -1,11 +1,9 @@
-import csvhandler.Impl.CSVHandlerImpl;
+import main_handler.MainWork;
 
 public class Main {
     public static void main(String[] args) {
-        CSVHandlerImpl reader = new CSVHandlerImpl();
+        MainWork mainWork = new MainWork();
+        mainWork.run();
 
-        reader.read();
-        reader.serializeArray();
-        reader.saveToCsv();
     }
 }

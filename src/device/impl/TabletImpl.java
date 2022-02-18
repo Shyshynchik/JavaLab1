@@ -1,8 +1,6 @@
 package device.impl;
 
-import device.Tablet;
-
-public class TabletImpl extends Tablet {
+public class TabletImpl extends device.Tablet {
 
     @Override
     public void setOs(String os) {

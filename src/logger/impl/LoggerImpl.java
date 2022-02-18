@@ -35,11 +35,13 @@ public class LoggerImpl implements Logger {
 
     @Override
     public void createErrorLog(String message, Exception error) {
+
         try {
             writer.write("!Error   " + getDate() + " " + message + " Подробнее: " + error + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     @Override
